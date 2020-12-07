@@ -1,0 +1,24 @@
+name: Rust
+
+on:
+  push:
+    branches: [ main, development ]
+  pull_request:
+    branches: [ main, development ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install rustup
+      run: curl https://sh.rustup.rs -sSf | sh -s -- -y
+    - name: Add Target
+      run: rustup target add thumbv6m-none-eabi
+    - name: Install GCC and binutils
+      run: sudo apt-get install gcc-arm-none-eabi binutils-arm-none-eabi
+    - name: Build
+      run: cargo build --verbose
