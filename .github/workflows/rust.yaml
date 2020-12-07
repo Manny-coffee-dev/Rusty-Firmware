@@ -21,7 +21,7 @@ jobs:
     - name: Add Target
       run: rustup target add thumbv6m-none-eabi
     - name: Install GCC and binutils
-      run: apt-get install gcc-arm-none-eabi binutils-arm-none-eabi
+      run: sudo apt-get install gcc-arm-none-eabi binutils-arm-none-eabi
     - name: Build
       run: cargo build --verbose
     - name: Run tests
