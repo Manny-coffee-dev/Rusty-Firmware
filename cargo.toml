@@ -1,0 +1,26 @@
+[package]
+name = "rusty-blink"
+version = "0.1.0"
+authors = ["Manny <manny.coffee-dev@pm.me>"]
+
+[dependencies]
+cortex-m = "0.6.3"
+m = "0.1.1"
+panic-halt = "0.2.0"
+
+[dependencies.cortex-m-rt]
+version = "0.6.13"
+
+[dependencies.stm32g0]
+version = "0.12.1"
+features = ["stm32g031", "rt"]
+
+[dependencies.stm32g0xx-hal]
+version = "0.0.9"
+features = ["rt", "stm32g031"]
+
+[profile.release]
+opt-level = 'z'     # Optimize for size.
+lto = true          # Enable Link Time Optimization
+codegen-units = 1   # Reduce number of codegen units to increase optimizations.
+panic = 'abort'     # Abort on panic
