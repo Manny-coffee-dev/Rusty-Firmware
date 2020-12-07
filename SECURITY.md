@@ -18,7 +18,7 @@ To submit a vulnerability report, please contact the email below. Your submissio
 
 ## Encryption key
 
-Please use this public key for encrypting vulnerability reports when sending to manny.coffee-dev@pm.me where possible:
+Please use this public key for encrypting vulnerability reports when sending to manny.coffee-dev@pm.me where possible (guidance on how to do this can be found [here](https://www.ucl.ac.uk/information-security/technical-advice/encryption/guidance-email-encryption):
 
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
