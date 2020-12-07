@@ -16,6 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Install rustup
+      run: curl https://sh.rustup.rs -sSf | sh -s -- -y
     - name: Add Target
       run: rustup target add thumbv6m-none-eabi
     - name: Install GCC and binutils
