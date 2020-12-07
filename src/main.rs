@@ -1,17 +1,17 @@
 #![no_std]
 #![no_main]
 #[macro_use(entry)]
-extern crate panic_halt; // you can put a breakpoint on `rust_begin_unwind` to catch panics
-extern crate cortex_m;
 extern crate cortex_m_rt as rt;
+extern crate panic_halt; // you can put a breakpoint on `rust_begin_unwind` to catch panics
 extern crate m;
 extern crate stm32g0;
 extern crate stm32g0xx_hal as hal;
+extern crate cortex_m;
 
-use hal::delay::Delay;
 use hal::gpio::gpioa::PA15;
 use hal::gpio::{Floating, Input, Output, PushPull};
 use hal::prelude::*;
+
 use stm32g0::stm32g031::Peripherals;
 
 #[entry]
