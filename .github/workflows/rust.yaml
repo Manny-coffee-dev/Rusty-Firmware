@@ -26,3 +26,8 @@ jobs:
       run: rustup component add llvm-tools-preview
     - name: Build
       run: cargo objcopy --release -- -O binary rusty-firmware.bin
+    - name: Publish Binary
+      uses: actions/upload-artifact@v2
+      with:
+        name: rusty-firmware.bin
+        path: ./rusty-firmware.bin

@@ -1,6 +1,6 @@
 # Rusty-Firmware
 
-![Rust](https://github.com/Manny-coffee-dev/Rusty-Firmware/workflows/Rust/badge.svg?branch=development)
+![Rust](https://github.com/Manny-coffee-dev/Rusty-Firmware/workflows/Rust/badge.svg?branch=main)
 
 Example embedded Rust firmware for STM32G031 development board.
 
