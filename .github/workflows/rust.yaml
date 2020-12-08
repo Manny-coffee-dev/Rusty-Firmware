@@ -20,6 +20,8 @@ jobs:
       run: rustup target add thumbv6m-none-eabi
     - name: Install GCC and binutils
       run: sudo apt-get install gcc-arm-none-eabi binutils-arm-none-eabi
+    - name: Add cargo binuntils
+      run: cargo install cargo-binutils
     - name: Add llvm tooling
       run: rustup component add llvm-tools-preview
     - name: Build
