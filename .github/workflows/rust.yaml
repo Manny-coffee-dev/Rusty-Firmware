@@ -20,5 +20,7 @@ jobs:
       run: rustup target add thumbv6m-none-eabi
     - name: Install GCC and binutils
       run: sudo apt-get install gcc-arm-none-eabi binutils-arm-none-eabi
+    - name: Add llvm tooling
+      run: rustup component add llvm-tools-preview
     - name: Build
-      run: cargo build --verbose
+      run: cargo objcopy --release -- -O binary rusty-firmware.bin
